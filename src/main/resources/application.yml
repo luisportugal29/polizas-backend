@@ -1,0 +1,27 @@
+server:
+    servlet: 
+        context-path: /api
+    port: 8080
+
+spring:
+    application:
+        name: arquitectura
+    profiles:
+        active: development
+    datasource:
+        url: jdbc:h2:mem:testdb
+        driverClassName: org.h2.Driver
+        username: test
+        password: ''
+    h2:
+        console:
+            enabled: true
+    jpa:
+        hibernate: 
+            ddl-auto: none
+        show-sql: true
+        defer-datasource-initialization: true
+
+logging:
+    file:
+        name: myapp.log
